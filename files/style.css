@@ -134,8 +134,11 @@ sub, sup {line-height: 0;}
   margin-top: 28px;
   margin-bottom: 28px;
   color: #5a6c7d;
-  font-style: italic;
   line-height: 1.6;
+}
+
+.figure-caption p {
+  font-style: italic;
 }
 .youtube-container {background-color: #000; margin-top: 32px;}
 .youtube {display: block; margin: auto; width: 960px; padding-top: 20px; padding-bottom: 20px;}

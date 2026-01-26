@@ -2057,7 +2057,7 @@
 
 
 
-    <div style="display: flex; justify-content: center; margin-top: 40px;">
+    <div style="display: flex; justify-content: center; margin-top: 20px;">
       <img src="figures_our/Fig1.jpg" alt="Abstract" style="width: 30%">
     </div>
   </div>
@@ -2122,14 +2122,15 @@
 
   <div>
     <h2 style="color: #3498db; font-weight: 700;">Part2. Benign Generation Preservation</h2>
+    <p class="abstract">
+      We compare <b>PromptGuard</b> with eight baselines and report the average CLIP Score and LPIPS Score. For the CLIP Score, <b>PromptGuard</b> achieves 
+      relatively higher results compared to the other seven protection methods, indicating a superior ability to preserve benign text-to-image alignment. 
+      Methods like UCE, SLD, and POSI experience a drop of more than 1.0 in the CLIP Score, while <b>PromptGuard</b> successfully limits the drop to within 
+      0.5, suggesting a minimal compromise in content alignment. Regarding the LPIPS Score, <b>PromptGuard</b> performs on par with the other protection 
+      methods, demonstrating its capability to generate high-fidelity benign images without significant degradation in image quality. 
+    </p>
   </div>
-  <p class="abstract">
-    We compare <b>PromptGuard</b> with eight baselines and report the average CLIP Score and LPIPS Score. For the CLIP Score, <b>PromptGuard</b> achieves 
-    relatively higher results compared to the other seven protection methods, indicating a superior ability to preserve benign text-to-image alignment. 
-    Methods like UCE, SLD, and POSI experience a drop of more than 1.0 in the CLIP Score, while <b>PromptGuard</b> successfully limits the drop to within 
-    0.5, suggesting a minimal compromise in content alignment. Regarding the LPIPS Score, <b>PromptGuard</b> performs on par with the other protection 
-    methods, demonstrating its capability to generate high-fidelity benign images without significant degradation in image quality. 
-  </p>
+
   
   <div class="figure-caption" style="margin-top: auto; text-align: center;">
     <div class="content" style="margin-top: 50px; display: flex; justify-content: center;">
@@ -2211,6 +2212,22 @@
   </div>
 
   <div class="hr-long"></div>
+
+  <div>
+    <h2 style="color: #2c3e50; font-weight: 700;">Citation</h2>
+  </div>
+  
+  <div class="content">
+    <pre class="bibtexsection">@misc{yuan2025promptguard,
+  title={PromptGuard: Soft Prompt-Guided Unsafe Content Moderation for Text-to-Image Models}, 
+  author={Lingzhi Yuan and Xinfeng Li and Chejian Xu and Guanhong Tao and Xiaojun Jia and Yihao Huang and Wei Dong and Yang Liu and Bo Li},
+  year={2025},
+  eprint={2501.03544},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2501.03544}, 
+}</pre>
+  </div>
 
   <style>
     li::before {

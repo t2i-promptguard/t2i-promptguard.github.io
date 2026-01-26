@@ -106,6 +106,7 @@ p {
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
   border-left: 4px solid #f1c432;
+  font-style: normal;
 }
 .math {font-family: "Computer Modern Sans", sans-serif; font-style: italic;}
 sub, sup {line-height: 0;}

@@ -1,22 +1,161 @@
-body {background-color: #fdfdfd; color: rgb(54, 54, 54); margin: 0px; font-size: 1em; }
-h1, h2, h3, h4, h5 {text-align: center;}
-h1 {margin-bottom: 24px; font-size: 2.2em; font-weight: normal;}
-h2 {margin-top: 48px; font-weight: bold !important;}
-h1, h2, h3, h4, h5, a, p, span, body {font-weight: normal; font-family: "Google Sans", sans-serif;}
-.header {background-color: #fdfdfd; width: 100%; padding-top: 48px; padding-bottom: 8px;}
-.links {width: 100%; margin: auto; text-align: center; padding-top: 8px;}
-.content {max-width: 1260px; margin: auto; margin-top: 48px; margin-bottom: 64px;}
-a, h2 {color: #c03d3e; text-decoration: none;}
-a:hover {color: #ce5252;}
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #f0f2f5 100%);
+  color: #2c3e50;
+  margin: 0px;
+  font-size: 1.05em;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5 {text-align: center; letter-spacing: 0.02em;}
+
+h1 {
+  margin-bottom: 28px;
+  font-size: 2.4em;
+  font-weight: 600;
+  line-height: 1.3;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  margin-top: 56px;
+  font-weight: 700 !important;
+  font-size: 1.9em;
+  color: #34495e;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+h2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #f1c432, #e67e22);
+  border-radius: 2px;
+}
+
+h1, h2, h3, h4, h5, a, p, span, body {font-weight: normal; font-family: "Google Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;}
+
+.header {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  width: 100%;
+  padding-top: 56px;
+  padding-bottom: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.header:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(241, 196, 50, 0.03) 0%, transparent 70%);
+  animation: headerGlow 15s ease-in-out infinite;
+}
+
+@keyframes headerGlow {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(10%); }
+}
+.links {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  max-width: 1260px;
+  margin: auto;
+  margin-top: 56px;
+  margin-bottom: 72px;
+  padding: 0 24px;
+}
+
+a, h2 {
+  color: #e74c3c;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #c0392b;
+  transform: translateY(-1px);
+}
 .nobreak {white-space: nowrap;}
-.hr {height: 1px; background-color: #d6dbdf; max-width: 960px; margin: auto; margin-top: 48px;}
-.hr-long {width: 100%; margin: 48px 0px; height: 1px; background-color: #d6dbdf;}
-p {line-height: 1.4em; text-align: justify;}
-.abstract {max-width: 940px; margin: auto;}
+
+.hr {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #d6dbdf 20%, #d6dbdf 80%, transparent);
+  max-width: 960px;
+  margin: auto;
+  margin-top: 56px;
+  border-radius: 1px;
+}
+
+.hr-long {
+  width: 100%;
+  margin: 56px 0px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #d6dbdf 10%, #d6dbdf 90%, transparent);
+  border-radius: 1px;
+}
+
+p {
+  line-height: 1.75em;
+  text-align: justify;
+  color: #34495e;
+  font-size: 1.05em;
+}
+
+.abstract {
+  max-width: 940px;
+  margin: auto;
+  padding: 32px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border-left: 4px solid #f1c432;
+}
 .math {font-family: "Computer Modern Sans", sans-serif; font-style: italic;}
 sub, sup {line-height: 0;}
-.figure {width: 100%; min-height: 120px; margin: 36px 0; background-repeat: no-repeat; background-position: center; background-size: contain;}
-.figure-caption {margin: auto; max-width: 95%; margin-top: 24px; margin-bottom: 24px;}
+.figure {
+  width: 100%;
+  min-height: 120px;
+  margin: 48px 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 16px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.figure:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.figure-caption {
+  margin: auto;
+  max-width: 95%;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  color: #5a6c7d;
+  font-style: italic;
+  line-height: 1.6;
+}
 .youtube-container {background-color: #000; margin-top: 32px;}
 .youtube {display: block; margin: auto; width: 960px; padding-top: 20px; padding-bottom: 20px;}
 .content-video {width: 100%; margin: 0; text-align: center;}
@@ -65,17 +204,108 @@ sub, sup {line-height: 0;}
 .legend-item {display: inline-block; margin-left: 6px; margin-right: 6px; font-size: 12px;}
 .legend-symbol {font-weight: bold; margin-right: 6px; font-size: 20px;}
 .page {display: inline-block; width: 96px; height: 124px; border: 1px solid #bbb; margin: 2px; background-repeat: no-repeat; background-position: center; background-size: contain;}
-table.authors {width: 100%; max-width: 900px; margin: auto; margin-bottom: -30px; text-align: center;}
-table.authors a {padding: 6px 0; display: inline-block; font-weight: normal; font-size: 1.3em;}
-table.authors .authors-affiliation {display: block; font-size: 1em;}
-a.btn {display: inline-block; min-width: 70px; font-family: "Google Sans", sans-serif; background-color:  rgb(47, 47, 47); color: white; padding: 8px 18px; font-size: 1.1em; font-weight: normal; border-radius: 32px;}
-a.btn:hover {background-color:  rgb(54, 54, 54);}
-.bibtexsection {padding: 4px 16px; font-family: "Courier", monospace; font-size: 14px; white-space: pre; background-color: #f4f4f4; text-align: left;}
+table.authors {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: -20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+table.authors a {
+  padding: 8px 4px;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 1.15em;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+table.authors a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+table.authors a:hover:after {
+  width: 80%;
+}
+
+table.authors .authors-affiliation {
+  display: block;
+  font-size: 1em;
+  color: #7f8c8d;
+}
+
+a.btn {
+  display: inline-block;
+  min-width: 70px;
+  font-family: "Google Sans", sans-serif;
+  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+  color: white;
+  padding: 12px 28px;
+  font-size: 1.05em;
+  font-weight: 500;
+  border-radius: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  border: none;
+  letter-spacing: 0.5px;
+}
+
+a.btn:hover {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+.bibtexsection {
+  padding: 20px 24px;
+  font-family: "SF Mono", "Monaco", "Courier New", monospace;
+  font-size: 13.5px;
+  white-space: pre;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  text-align: left;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.04);
+  overflow-x: auto;
+}
+
 .noselect {-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
-.bold {font-weight: bolder; color:rgb(6, 6, 6)}
+
+.bold {
+  font-weight: 700;
+  color: #2c3e50;
+}
+
 .italic {font-style: italic;}
-.highlight {font-weight: bolder; font-style: italic; color: #c03d3e;}
-footer {background-color: #efeff3; width: 100%; margin-top: 32px; padding-top: 16px; padding-bottom: 16px; text-align: center;}
+
+.highlight {
+  font-weight: 700;
+  font-style: italic;
+  color: #e74c3c;
+  padding: 2px 6px;
+  background: rgba(231, 76, 60, 0.08);
+  border-radius: 4px;
+}
+
+footer {
+  background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%);
+  width: 100%;
+  margin-top: 48px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  text-align: center;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.05);
+}
 
 
 .video-container figure {

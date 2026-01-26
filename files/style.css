@@ -44,7 +44,6 @@ h1, h2, h3, h4, h5, a, p, span, body {font-weight: normal; font-family: "Google 
   width: 100%;
   padding-top: 56px;
   padding-bottom: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
 }
 .links {
   width: 100%;
